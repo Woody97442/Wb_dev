@@ -40,6 +40,9 @@ const TestView = () => {
             <View style={{flex: 2, backgroundColor: 'red'}}></View>
             <View style={{flex: 2, backgroundColor: 'green'}}></View>
             <View style={{flex: 2, backgroundColor: 'blue'}}></View>
+            <TouchableOpacity onPress={() => "ajouter la funtion a executer"}>
+                <Image source={require('url de l\'image')} />
+            </TouchableOpacity>
         </View>
     );
 };

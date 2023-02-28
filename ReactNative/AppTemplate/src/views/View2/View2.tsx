@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import * as commonStyle from '../../utils/commonStyle';
-// import { connect } from 'react-redux';
 import {
     SafeAreaView,
     StyleSheet,
@@ -16,12 +15,12 @@ import {
 } from 'react-native';
 
 
-const BaseView = () => {
+const View2 = () => {
 
     return (
         <View style={styles.main_container}>
 
-            <Text>BaseView !</Text>
+            <Text>View 2 !</Text>
 
         </View>
     );
@@ -30,10 +29,13 @@ const BaseView = () => {
 
 const styles = StyleSheet.create({
     main_container: {
-        flex: 1
-    },
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems:'center',
+      justifyContent:'center',
+    }
 
 });
 
 
-export default BaseView;
+export default View2;
