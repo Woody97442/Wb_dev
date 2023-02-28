@@ -1,0 +1,17 @@
+
+ReactNative/AppTemplate/.bundle
+ReactNative/AppTemplate/__tests__
+ReactNative/AppTemplate/android
+ReactNative/AppTemplate/ios
+ReactNative/AppTemplate/node_modules
+ReactNative/AppTemplate/.eslintrc.js
+ReactNative/AppTemplate/.gitignore
+ReactNative/AppTemplate/.node-version
+ReactNative/AppTemplate/.prettierrc.js
+ReactNative/AppTemplate/.ruby-version
+ReactNative/AppTemplate/.watchmanconfig
+ReactNative/AppTemplate/app.json
+ReactNative/AppTemplate/babel.config.js
+ReactNative/AppTemplate/Gemfile
+ReactNative/AppTemplate/index.js
+ReactNative/AppTemplate/metro.config.js
