@@ -1,6 +1,21 @@
 // style commun ré-utilisable
 
-export const COLOR_BLUE = 'rgb(126, 0, 0)';
+export const COLORS = {
+    primary:'#695cd4',
+    secondary:'#f4f6fa',
+    text:'#000',
+    iconColor:'#eaebef'
+};
+
+export const TEXT_SIZE = {
+    title: 22,
+    secondary: 14,
+};
+
+export const PADDING = {
+    horizontal: 15,
+    vertical: 15,
+};
 
 export const roundedButton = {
     alignItems: 'center',

@@ -14,3 +14,7 @@ npm install react-native-vector-icons
 npm install react-redux
 npm install redux
 npm install redux-persist
+npm install @react-navigation/material-bottom-tabs react-native-paper
+
+# Android app builde.gradle
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
