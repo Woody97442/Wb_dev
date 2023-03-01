@@ -24,7 +24,7 @@ const HomeView = () => {
             {/* Debut du header */}
             <View style={homeStyles.header}>
                 <Text style={homeStyles.titleApp}>Gaming Booster</Text>
-                <Image source={require('../../assets/images/avatar.jpg')} style={homeStyles.userImg}/>
+                <Image source={require('../../assets/images/woodyavatar.png')} style={homeStyles.userImg}/>
             </View>
             {/* Fin du header */}
 
