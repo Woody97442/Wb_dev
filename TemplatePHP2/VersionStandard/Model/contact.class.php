@@ -13,8 +13,6 @@
 
     class Contact{
 
-        
-
         /**
          * Fonction qui vérifie si les donnée exite déjas dans la BDD. 
          * Si oui retourne 1 Si non retourn 0.
