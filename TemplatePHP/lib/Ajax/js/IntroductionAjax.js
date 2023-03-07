@@ -1,1 +1,0 @@
-let xml = new XMLHttpRequest();
