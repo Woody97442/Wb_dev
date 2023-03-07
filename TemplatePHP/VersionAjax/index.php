@@ -54,7 +54,7 @@
 
                         <div class="d-flex flex-row justify-content-between">
                             <div>
-                                <button class="btn btn-danger" type="reset" id="annuler">Annuler</button>
+                                <button class="btn btn-danger" type="reset" id="cancelForm">Annuler</button>
                                 <button class="btn btn-success" type="submit" id="submit">Envoyer</button>
                             </div>
                             <div>

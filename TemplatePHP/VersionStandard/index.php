@@ -3,47 +3,49 @@
 require('./Model/contact.class.php');
 
 
-// Si le Formulaire a été soumis
+// Vérifie si le formulaire a été soumis
 if (!empty($_POST)) {
 
-    // Variable du formulaire envoyer
+    // Récupère les données soumises par le formulaire
     $name = $_POST["name"];
     $firstName = $_POST["firstName"];
     $email = $_POST["email"];
     $message = $_POST["message"];
 
-    // 
-    if (empty($name) || empty($firstName) || empty($email) || empty($message)) {
+    // Vérifie si toutes les données ont été fournies et si l'e-mail est valide
+    if (empty($name) || empty($firstName) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($message)) {
         $checked = false;
     } else {
         $checked = true;
     }
-    // Message erreur a afficher dans le cas échéant suivant
+
+    // Si une ou plusieurs données sont manquantes, définit la variable $error* correspondante pour afficher un message d'erreur
     if (empty($name)) {
-        $errorName = " Indiquez votre Nom";
+        $errorName = "Indiquez votre nom";
     }
-    if (empty($email)) {
-        $errorEmail = " Indiquez une adresse Email valide";
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errorEmail = "Indiquez une adresse e-mail valide";
     }
     if (empty($message)) {
-        $errorMessage = " Indiquez votre Messages";
+        $errorMessage = "Indiquez votre message";
     }
 
+    // Si toutes les données sont présentes et valides, enregistre les données dans la base de données et envoie un e-mail à l'utilisateur
     if ($checked) {
-        // Créer le contact
+        // Crée une instance de la classe Contact
         $contact = new Contact();
-        // vérifie si le contact exite dans la BDD si ou affiche un message sinon envoie les donnée
-        if ($contact->CheckDuplicated($name, $firstName, $email, $message) == 1) {
 
+        // Vérifie si le message est déjà enregistré dans la base de données
+        if ($contact->CheckDuplicated($name, $firstName, $email, $message) == 1) {
             $formSend = "Ce message est déjà transmis";
         } else {
-            //insert les donnée en BDD
+            // Insère les données dans la base de données
             $contact->InsertBDD($name, $firstName, $email, $message);
 
-            // envoie de l'email
+            // Envoie un e-mail à l'utilisateur
             $contact->SendMailPHPMailer($name, $firstName, $email, $message);
 
-            // Suprime les donnée des variable
+            // Supprime les données des variables
             $name = null;
             $firstName = null;
             $email = null;
@@ -129,9 +131,7 @@ if (!empty($_POST)) {
             </div>
         </div>
     </div>
-    <!-- <?php
-            echo "<pre>", print_r($GLOBALS), "</pre>";
-            ?> -->
+    <!-- <?php echo "<pre>", print_r($GLOBALS), "</pre>"; ?> -->
 
 </body>
 
