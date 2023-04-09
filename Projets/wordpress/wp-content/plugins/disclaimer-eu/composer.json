@@ -1,0 +1,16 @@
+{
+    "name": "woody/disclaimer-eu",
+    "type": "wordpress-plugin",
+    "autoload": {
+        "psr-4": {
+            "Woody\\DisclaimerEu\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Woody97442",
+            "email": "woody97442@hotmail.fr"
+        }
+    ],
+    "require": {}
+}
